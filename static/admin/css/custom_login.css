@@ -1,0 +1,87 @@
+/*########################custom Login page, login.html################*/
+body, html {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  body {
+    /* The image used */
+    background-image: url('bg1.jpg');
+    /* Full height */
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .password{
+    color:black;
+    font-weight:bold;
+    font-family: cursive;
+  }
+
+  .username{
+    color:black;
+    font-weight:bold;
+    font-family:cursive;
+  }
+
+  .myjumb{
+    height: 60vh;
+    width: 60vw;
+    background-color: rgba(255,255,255,0.5);
+    padding: 20px; /* Add padding to the form container */
+    border-radius: 10px; /* Add border radius to the form container */
+  }
+
+  .login_button{
+    background-color: rgba(28, 75, 195, 0.5);
+  }
+
+  .story{
+    text-align: center;
+    color: black;
+    font-weight:bold;
+    font-family:cursive;
+  }
+  .errors{
+    font-weight: bold;
+    color: black;
+  }
+  /* Customize form fields */
+  input[type="text"]{
+    padding: 10px;
+    width: 100%;
+    box-sizing:border-box;
+    background-color: rgba(255,255,255,0.7);
+  }
+  input[type="password"] {
+    /* Add custom styling to text and password fields */
+    padding: 10px;
+    width: 100%;
+    box-sizing:border-box;
+    background-color: rgba(255,255,255,0.7);
+  }
+
+  .login-form label {
+    /* Add custom styling to form labels */
+    font-weight: bold;
+    color: black;
+    font-family:cursive;
+  }
+
+  .login-form p {
+    /* Add custom styling to form field paragraphs */
+    font-weight: bold;
+    color: black;
+    font-family:cursive;
+  }
+
+footer {
+  margin-top: 25px;
+  color: white;
+font-family: cursive;
+}

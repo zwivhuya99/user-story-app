@@ -1,0 +1,40 @@
+/*#################custom index.html ###################*/
+.btn-app {
+    display: flex;
+    background-color: rgba(226, 208, 12, 0.3);
+    color: black;
+    margin-top: 4%;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    font-family: cursive;
+    height: 10vh; /* Adjust this value based on your requirements */
+    width: 20vw; 
+  }
+  .app_name{
+    color: rgb(255, 255, 255);
+    text-transform: capitalize;
+    font-family: cursive;
+  }
+  .myjumb{
+  margin-top:10%; /*moving the jumbotron down*/
+  background-color: rgba(0, 0, 0,0.6)
+  }
+  .description{
+    justify-content:left;
+    align-items: left;
+    font-weight: bold;
+    font-family: cursive;
+    color: rgba(255, 255, 255);
+  }
+  
+  #content-main{
+    justify-content: center;
+  }
+  
+  footer {
+      margin-top: 20px;
+      color: white;
+    font-family: cursive;
+  }
+  

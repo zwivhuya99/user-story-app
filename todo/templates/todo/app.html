@@ -1,0 +1,89 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>User Story App</title>
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="{% static 'todo/bs/css/flatly.min.css' %}" />
+		<link rel="stylesheet" href="{% static 'todo/styles.css' %}" />
+	</head>
+	<body>
+
+		<div class="container-fluid " id="wrapper">
+			<div class="row">
+				<div class="col-lg-4 col-lg-offset-4" id="content">
+					<h2>Django Project User Stories</h2>
+					
+					<form action="{% url 'add' %}" method="POST" role="form" id="myform">
+						{% csrf_token %}
+						<div class="form-group">
+							<div class="input-group">
+							  {{ form.text }}
+							  <span class="input-group-btn">
+								  <button type="submit" class="btn btn-default" id="add-btn">ADD</button>
+							  </span>
+							</div>
+						</div>
+					</form>
+
+					<div class="row t10">
+						<div class="col-lg-12">
+							<div class="btn-toolbar">
+								<div class="btn-group">
+									<a href="{% url 'deletecomplete' %}"><button type="button" class="btn btn-danger btn-delete">
+										<i class="glyphicon glyphicon-trash"></i> DELETE COMPLETED
+									</button></a>
+								</div>
+								<div class="btn-group">
+									<a href="{% url 'deleteall' %}"><button type="button" class="btn btn-danger btn-delete"> 
+										<i class="glyphicon glyphicon-trash"></i> DELETE ALL
+									</button></a>
+								</div>
+								<div class="btn-group">
+									<a href="{% url 'admin:index'%}"><button type="button" class="btn btn-warning btn-back">INTRO
+									</button></a>
+								</div>
+
+							</div>
+						</div>
+					</div>
+
+					<ul class="list-group t20">
+						{% for todo in todo_list %}
+							{% if todo.complete %}
+							<li class="list-group-item todo-completed">{{ todo.text }} 
+									<a href="{% url 'deleleteItem' todo.id %}"><button type="buton" class="btn btn-sm trash-icon">
+									    <i class="glyphicon glyphicon-trash"></i> Delete
+								    </button> </a>
+
+									<a href="{% url 'reAddItem' todo.id %}"><button type="submit" class="btn undo-icon">
+									    <i class="glyphicon glyphicon-repeat"></i> Re-add
+								    </button> </a>	
+							</li> 
+							
+							{% else %}
+							<a href="{% url 'complete' todo.id %}" ><li class="list-group-item todo-notcomplete"><span class="todo-text">{{ todo.text }}</span>  															
+							        <a href="{% url 'deleleteItem' todo.id %}"> <button type="submit" class="btn btn-sm trash-icon">
+									    <i class="glyphicon glyphicon-trash"></i> Delete
+								    </button> </a>  							
+							</li> </a>
+							{% endif %}
+						{% endfor %}
+					</ul>
+
+				</div>
+			</div>
+
+			<footer>
+				<div class="row pad">
+					<div class="col-lg-12 text-center">
+						Copyright &copy; 2023 <strong>Zwivhuya Mulibana</strong>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>

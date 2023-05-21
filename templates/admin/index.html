@@ -1,0 +1,44 @@
+{% extends "admin/base.html" %}
+{% load static %}
+{% load i18n static %}
+
+{% block coltype %}colMS{% endblock %}
+
+{% block bodyclass %}{{ block.super }} dashboard{% endblock %}
+
+{% block nav-breadcrumbs %}{% endblock %}
+
+{% block nav-sidebar %}{% endblock %}
+
+{% block content %}
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="{% static 'admin/css/custom_index.css' %}">
+</head>
+
+<div class="container-fluid" id="content-main">
+
+      <div class="jumbotron myjumb">
+        <h1 class="display-4 app_name">User Story Application</h1>
+        <hr class="my-4">
+        <p class="description">This application assists developers in incorporating their user stories during project planning. 
+          It allows developers to add, mark as completed, and remove user stories as needed. 
+          When a developer adds a task, it is displayed in green color to indicate that the user story is still open. 
+          The application also provides the ability to remove completed user stories individually or all at once. 
+          Additionally, the app includes a feature that allows users to re-add a user story that was previously marked as completed.
+        <p>
+        <!--<hr class="my-4">
+        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>-->
+        <a href="{% url 'app' %}"><button type="button" class="btn-dark  btn-app"> CLICK HERE TO OPEN THE APPLICATION</a>
+      </div>
+</div>
+<footer>
+  <div class="row pad">
+    <div class="col-lg-12 text-center">
+      Copyright &copy; 2023 <strong>Zwivhuya Mulibana</strong>
+    </div>
+  </div>
+</footer>
+{% endblock %}

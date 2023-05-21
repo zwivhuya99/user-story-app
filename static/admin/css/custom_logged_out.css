@@ -1,0 +1,23 @@
+/*#################################### custom logged_out.html #################################*/
+.login_again{
+  font-weight: bolder;
+  text-align: center;
+  color: white;
+  font-family: cursive;
+}
+.login_again2{
+  font-weight: bolder;
+  text-align: center;  
+  color: rgb(255,255,255);
+  background-color: rgba(0, 0, 0, 0.6);  
+  font-family: cursive;
+}
+.login_again_jumb{
+  margin-top: 10%;
+  background-color: rgba(0, 0, 0, 0.5)
+}
+.pad{
+margin-top: 20px;
+color: white;
+font-family: cursive;
+}

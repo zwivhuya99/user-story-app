@@ -1,0 +1,32 @@
+/*################### custom base.html ####################*/
+body, html {
+    height: 100%;
+  }
+  
+  .bg {
+    /* The image used */
+    background-image: url('bg1.jpg');
+  
+    /* Full height */
+    height: 100%;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .user{
+      color: rgb(255, 255, 255);
+      text-transform: capitalize;
+      font-family:'Courier New', Courier, monospace;
+  }
+  .myNavBar{
+       /*background-color: rgb(37, 35, 185);*/
+      background-color: rgba(0,0,0, 0.5);
+  }
+  .logout{
+      font-family: cursive;
+      font-weight: bolder;
+      color:white;
+      background-color: rgba(240, 233, 11, 0.1);
+  }

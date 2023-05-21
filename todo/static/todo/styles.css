@@ -1,0 +1,88 @@
+body {
+    /*background-image: url("bg1.jpg");*/
+	background-image: url('bg1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+	font-family: cursive;
+}
+
+#myform {
+	background-color: rgba(0, 0, 0, 0.3);
+	padding: 10px;
+	/*border-radius: px;*/
+}
+
+h2 { 
+	font-weight: bolder;
+	color: white;
+	font-family: cursive;
+}
+
+#wrapper {
+	margin-top: 2% !important;
+}
+#content {
+	background: beige;
+	padding: 25px;
+	background-color: rgba(0, 0, 0, 0.3); /*100% opacity = 0 transparent*/
+}
+#content > h2 {
+	font-size: 18px;
+	text-align: center;
+	padding-top: 0;
+}
+.t10 {
+	margin-top: 10px;
+}
+.t20 {
+	margin-top: 20px;
+}
+.todo-completed {
+	text-decoration: line-through; /*crashing the list*/
+	color: black;
+	background: rgba(255, 8, 8, 0.3); /*crash and set to red background colour*/
+}
+
+.todo-notcomplete {
+	background: rgba(8, 239, 35, 0.3); /*set to red colour*/
+}
+
+.todo-text{
+	color: black;
+}
+
+.btn-delete{
+	background-color: rgba(0, 0, 0, 0.3);
+}
+footer {
+	margin-top: 25px;
+	color: white;
+}
+.list-group-item {
+	color: black;
+}
+
+.trash-icon {
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	color: black;
+	background-color: rgba(255, 255, 255, 0.3);
+	transform: translateY(-50%);
+}
+
+.undo-icon {
+	position: absolute;
+	top: 50%;
+	right: 85px;
+	color: black;
+	background-color: rgba(255, 255, 255, 0.3);
+	transform: translateY(-50%);
+}
+
+.btn-back{
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
