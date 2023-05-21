@@ -3,7 +3,7 @@
   font-weight: bolder;
   text-align: center;
   color: white;
-  font-family: cursive;
+  font-family: 'Courier New', Courier, monospace;
 }
 .login_again2{
   font-weight: bolder;
@@ -19,5 +19,5 @@
 .pad{
 margin-top: 20px;
 color: white;
-font-family: cursive;
+font-family: 'Courier New', Courier, monospace;
 }

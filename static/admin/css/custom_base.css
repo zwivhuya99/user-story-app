@@ -25,7 +25,7 @@ body, html {
       background-color: rgba(0,0,0, 0.5);
   }
   .logout{
-      font-family: cursive;
+      font-family:'Courier New', Courier, monospace;
       font-weight: bolder;
       color:white;
       background-color: rgba(240, 233, 11, 0.1);

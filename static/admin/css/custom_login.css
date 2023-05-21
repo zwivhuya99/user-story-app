@@ -20,13 +20,13 @@ body, html {
   .password{
     color:black;
     font-weight:bold;
-    font-family: cursive;
+    font-family:'Courier New', Courier, monospace;
   }
 
   .username{
     color:black;
     font-weight:bold;
-    font-family:cursive;
+    font-family:'Courier New', Courier, monospace;
   }
 
   .myjumb{
@@ -45,7 +45,7 @@ body, html {
     text-align: center;
     color: black;
     font-weight:bold;
-    font-family:cursive;
+    font-family:'Courier New', Courier, monospace;
   }
   .errors{
     font-weight: bold;
@@ -70,18 +70,18 @@ body, html {
     /* Add custom styling to form labels */
     font-weight: bold;
     color: black;
-    font-family:cursive;
+    font-family:'Courier New', Courier, monospace;
   }
 
   .login-form p {
     /* Add custom styling to form field paragraphs */
     font-weight: bold;
     color: black;
-    font-family:cursive;
+    font-family:'Courier New', Courier, monospace;
   }
 
 footer {
   margin-top: 25px;
   color: white;
-font-family: cursive;
+font-family:'Courier New', Courier, monospace;
 }
