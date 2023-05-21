@@ -130,12 +130,5 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'todo/static'),
 ]
 
-# Email Configuration
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'mulibana.zya@gmail.com'
-#EMAIL_PORT = 587  # or the appropriate port number for your email server
-EMAIL_HOST_USER = 'mulibana.zya@gmail.com'
-EMAIL_HOST_PASSWORD = 'Muliby@99'
-EMAIL_USE_TLS = True  # Use TLS encryption for secure connection
-DEFAULT_FROM_EMAIL = 'mulibana.zya@gmail.com'  # Set the default "from" email address
+
 
