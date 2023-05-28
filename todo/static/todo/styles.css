@@ -25,7 +25,10 @@ h2 {
 }
 #content {
 	background: beige;
-	padding: 25px;
+	padding: 10px;
+	margin-left: 2%;
+	margin-right: 2%;
+	width:auto;
 	background-color: rgba(0, 0, 0, 0.3); /*100% opacity = 0 transparent*/
 }
 #content > h2 {
@@ -69,7 +72,7 @@ footer {
 	top: 50%;
 	right: 10px;
 	color: black;
-	background-color: rgba(255, 255, 255, 0.3);
+	background-color: rgba(255, 255, 255, 0.5);
 	transform: translateY(-50%);
 }
 
@@ -78,11 +81,29 @@ footer {
 	top: 50%;
 	right: 90px;
 	color: black;
-	background-color: rgba(255, 255, 255, 0.3);
+	background-color: rgba(255, 255, 255, 0.5);
 	transform: translateY(-50%);
 }
 
+.edit-notcompleted {
+	position: absolute;
+	top: 50%;
+	right: 90px;
+	color: black;
+	background-color: rgba(255, 255, 255, 0.5);
+	transform: translateY(-50%);
+}
+.edit-completed {
+	position: absolute;
+	top: 50%;
+	right: 190px;
+	color: black;
+	background-color: rgba(255, 255, 255, 0.5);
+	transform: translateY(-50%);
+}
+
+
 .btn-back{
-	background-color: rgba(0, 0, 0, 0.3);
+	background-color: rgba(0, 0, 0, 0.5);
 }
 

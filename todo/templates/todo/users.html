@@ -1,0 +1,53 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="{% static 'todo/bs/css/flatly.min.css' %}" />
+  <link rel="stylesheet" href="{% static 'todo/users.css' %}" />
+</head>
+
+<body class="bg">
+    <table class="table t20">
+    <thead>
+        <tr>
+            <th class="table-divider">Username</th>
+            <th class="table-divider">Admin</th>
+            <th class="table-divider">Delete User</th>
+            <th>Make Admin</th>
+        </tr>
+    </thead>
+    
+    <div class="table-body">
+    <tbody>
+        {% for user in users %}
+        <tr>
+            <td class="table-divider">{{ user.username }}</td>
+            <td class="table-divider text-center">
+                {% if user.is_staff %}
+                     Yes 
+                {% else %}
+                     No
+                {% endif %}</td>
+            <td class="table-divider text-center">
+                <a href="{% url 'deleteUser' user.id %}"><button type="button" class="btn btn-sm trash-icon">
+                    <i class="glyphicon glyphicon-trash"></i> Delete
+                </button></a>
+            </td>
+            <td class="text-center">
+                <a href="{% url 'makeAdmin' user.id %}"><button type="button" class="btn btn-sm admin-icon">
+                    <i class="glyphicon glyphicon-user"></i> Make Admin
+                </button></a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+    </div>
+</table>
+
+<a href="{% url 'admin:index' %}"><span class="go-back">Go Back</span>  </a>
+
+</body>
+</html>

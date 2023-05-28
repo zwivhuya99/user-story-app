@@ -18,21 +18,40 @@
   <link rel="stylesheet" type="text/css" href="{% static 'admin/css/custom_index.css' %}">
 </head>
 
+<style>
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.button-container .btn-app {
+  margin: 0 10px;
+}
+.users_click{
+  color: white;
+}
+</style>
+
 <div class="container-fluid" id="content-main">
 
-      <div class="jumbotron myjumb">
-        <h1 class="display-4 app_name">User Story Application</h1>
-        <hr class="my-4">
-        <p class="description">This application assists developers in incorporating their user stories during project planning. 
-          It allows developers to add, mark as completed, and remove user stories as needed. 
-          When a developer adds a user story, it is displayed in green color to indicate that the user story is still open. 
-          The application also provides the ability to remove completed user stories individually or all at once. 
-          Additionally, the app includes a feature that allows users to re-add a user story that was previously marked as completed.
-        <p>
-        <!--<hr class="my-4">
-        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>-->
-        <a href="{% url 'app' %}"><button type="button" class="btn-dark  btn-app"> CLICK HERE TO OPEN THE APPLICATION</a>
-      </div>
+  <div class="jumbotron myjumb">
+    <h1 class="display-4 app_name">User Story Application</h1>
+    <p class="description">This application assists developers in incorporating their user stories during project planning. 
+      It allows developers to add, mark as completed, and remove user stories as needed. 
+      When a developer adds a user story, it is displayed in green color to indicate that the user story is still open. When
+      the user story is marked completed it will crashed and have a red background, this is done by clicking on the user story. 
+      The application also provides the ability to remove completed user stories individually or all at once. 
+      Additionally, the app includes a feature that allows users to re-add a user story that was previously marked as completed.
+    </p>
+    <!--<hr class="my-4">
+    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>-->
+    <div class="button-container">
+      <a href="{% url 'app' %}"><button type="button" class="btn-dark btn-app"> <span class="app_click">CLICK HERE TO OPEN THE APPLICATION</span> </button></a>
+      <a href="{% url 'user_list' %}"><button type="button" class="btn-dark btn-app"> <span class="users_click">CLICK HERE TO MANAGE USERS</span> </button></a>
+    </div> 
+  </div>
 </div>
 <footer>
   <div class="row pad">

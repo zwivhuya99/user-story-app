@@ -8,8 +8,8 @@ from .models import Todo
     
 class NewTodoForm(forms.ModelForm):
     class Meta:
-        model = Todo
-        fields = ['text']
+        model = Todo #model to use
+        fields = ['text'] 
         widgets ={
             'text' : forms.TextInput(
             attrs={'class' : 'form-control', 'placeholder' : 'Add user story', 'aria-label' : 'Todo', 'aria-describedby' : 'add-btn'})

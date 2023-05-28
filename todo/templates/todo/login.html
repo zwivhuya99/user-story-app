@@ -11,32 +11,28 @@
 
 <body class="bg">
   <div class="container">
-    <!-- check if there are any error messages from the login view -->
-    <div class="errors">
-      {% if messages %}
-       <p class="errornote">
-         {% for message in messages %}
-         {{ message }}
-         {% endfor %}
-       </p>
-       {% endif %}
-    </div>
-    
+
     <div class="jumbotron myjumb">
-      <h3 class="display-4 story">Admin Login</h3>
+      <h3 class="display-4 story">User Login</h3>
+            <!--SHOW THE ERROR MESSAGES FOR THIS LOGIN FORM-->
+      <div class="errors">
+        {% if user is None %}
+         <p class="errornote">
+           {{ msg }}
+         </p>
+         {% endif %}
+      </div>
       <hr class="my-4">
       <form method="post">
-      
-        <div class="login-form"> 
+        <div class="login-form">
             {% csrf_token %}
-            {{ form.as_p }}  <!--Django template tag that renders the form fields in a specific format -->
+            {{ form.as_p }}  <!-- Django template tag that renders the form fields in a specific format -->
         </div>      
 
-        <button type="submit" class="btn btn-primary login_button">Login</button> 
-          <a href="{% url 'signin' %}"><span class="signin-text">User Login</span> </a> 
-          <a href="{% url 'signup' %}"><span class="signin-text">User Signup</span></a>  
-        
-      </form>
+        <button type="submit" class="btn btn-primary login_button">Login</button>   
+          <a href="{% url 'admin:login' %}"><span class="signin-text">Admin Login</span> </a> 
+          <a href="{% url 'signup' %}"><span class="signin-text">User Signup</span>  </a>
+        </form>
       
     </div> 
     

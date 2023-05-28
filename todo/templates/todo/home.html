@@ -1,0 +1,78 @@
+{% load static %}
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'todo/styles.css' %}">
+</head>
+<style>
+  
+h2 {
+    font-weight: bold;
+}
+    
+.btn-sigout{
+    background-color: rgba(15, 60, 223, 0.3);
+    font-weight:500;
+    margin-right: 6px;
+    align-items: center;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    display:inline-block;
+    font-size: 15px;
+}   
+.myjumb {
+        height: 60vh;
+        width: 60vw;
+        margin-top: 10%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0,0,0,0.6);
+        padding: 20px;
+        border-radius: 10px;
+}
+    
+.user_div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+.story{
+    color: white;
+}
+.welcome{
+    align-items: center;
+}
+.description{
+    justify-content:left;
+    align-items: left;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgba(255, 255, 255);
+}
+.info{
+    color:rgb(224, 201, 28);
+}
+.email{
+    color:white;
+}
+   
+</style>
+    
+    <body>
+        <div class="container-fluid user_div">
+            <div class="jumbotron myjumb">
+                <h3 class="display-4 story">Welcome, {{request.user}}</h3>
+                <hr class="my-4">
+                <p class="description">This application assists developers in incorporating their user stories during project planning. 
+                It allows developers to add, mark as completed, and remove user stories as needed. 
+                When a developer adds a user story, it is displayed in green color to indicate that the user story is still open. When
+                the user story is marked completed it will crashed and have a red backgound, this is done by clicking on the user story. 
+                The application also provides the ability to remove completed user stories individually or all at once. 
+                Additionally, the app includes a feature that allows users to re-add a user story that was previously marked as completed.
+                <span class="info">If you would like to be part this project we can make you an admin user, please send an email to : <a class="email" href="mailto:mulibana.zya@gmail.com">mulibana.zya@gmail.com</a> and we will come back to you.</p>
+                <a href="{% url 'signout' %}"><button type="button" class="btn-primary btn-signout"><span class="signup-text">Sign out</span></button></a>
+            </div> 
+        </div>
+    </body>
+    

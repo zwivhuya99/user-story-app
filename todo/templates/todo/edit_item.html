@@ -1,0 +1,19 @@
+{% load static %}
+{% block content %}
+<head>
+    <link rel="stylesheet" href="{% static 'todo/edit_item.css' %}" />
+</head>
+<body>   
+    <div class="container-fluid " id="wrapper">
+        <h2>Edit Item</h2>
+        <div class="col-lg-4 col-lg-offset-4" id="content">
+            <form class="myform" method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+            <button class="save_button" type="submit">Save</button>
+            <a href="{% url 'app' %}"><button type="button" class="btn-dark back-to-app"><span class="back-to-app-text">Back to the app</span></button></a>
+            </form>
+        </div>
+    <div> 
+{% endblock %}
+</body>

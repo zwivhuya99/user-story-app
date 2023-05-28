@@ -1,0 +1,69 @@
+body, html {
+    height: 100%;
+    /*By setting display: flex; on the body element in the provided code, 
+    we make the body a flex container that horizontally and vertically centers its child elements.
+    This ensures that the form container is positioned at the center of the viewport.*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .myjumb{
+    height: 60vh;
+    width: 60vw;
+    height: 500px;
+    background-color: rgba(255,255,255,0.7);
+    padding: 3px; /* Add padding to the form container */
+    border-radius: 10px; /* Add border radius to the form container */
+  }
+
+  .login_button{
+    background-color: rgba(28, 75, 195, 0.5);
+  }
+
+  .story{
+    text-align: center;
+    color: black;
+    font-weight:bold;
+    font-family:'Courier New', Courier, monospace;
+  }
+  .errors{
+    font-weight: bold;
+    color: black;
+  }
+  /* Customize form fields */
+  input[type="text"]{
+    padding: 10px;
+    width: 100%;
+    box-sizing:border-box;
+    background-color: rgba(255,255,255,0.3);
+  }
+  input[type="password"] {
+    /* Add custom styling to text and password fields */
+    padding: 10px;
+    width: 100%;
+    box-sizing:border-box;
+    background-color: rgba(255,255,255,0.3);
+  }
+
+footer {
+  margin-top: 100px;
+  color: white;
+  font-family:'Courier New', Courier, monospace;
+}
+.btn-signup{
+	background-color: rgba(15, 60, 223, 0.3);
+  font-weight:500;
+  margin-right: 6px;
+  align-items: center;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  display:inline-block;
+  font-size: 15px;
+}
+
+.signup-text{
+    color:blue;
+    margin-left: 2%;
+ }

@@ -49,7 +49,8 @@ body, html {
   }
   .errors{
     font-weight: bold;
-    color: black;
+    color: rgb(188, 46, 103);
+    background-color: rgba(0,0,0,0.7);
   }
   /* Customize form fields */
   input[type="text"]{
@@ -80,8 +81,26 @@ body, html {
     font-family:'Courier New', Courier, monospace;
   }
 
+  .btn-signup{
+    background-color: rgba(15, 60, 223, 0.3);
+    font-weight:500;
+    margin-right: 6px;
+    align-items: center;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    display:inline-block;
+    font-size: 15px;
+}
+  
+.signin-text{
+      color:blue;
+      margin-left: 2%;
+}
+
+
 footer {
   margin-top: 25px;
   color: white;
-font-family:'Courier New', Courier, monospace;
+  font-family:'Courier New', Courier, monospace;
 }
